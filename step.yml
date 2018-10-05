@@ -72,17 +72,17 @@ inputs:
       is_required: true
   - browserstack_username: $BROWSERSTACK_USERNAME
     opts:
-      title: "Browserstack access key"
-      summary: Your Browserstack access key
+      title: "Browserstack username"
+      summary: Your Browserstack username
       description: |
         The username you use to log into your Browserstack account
       is_required: true
   - browserstack_access_key: $BROWSERSTACK_ACCESS_KEY
     opts:
-      title: "Browserstack password"
-      summary: Your Browserstack password
+      title: "Browserstack access key"
+      summary: Your Browserstack access key
       description: |
-        The password you use to log into your Browserstack account
+        The access key you use to log into your Browserstack account
       is_required: true
 
 outputs:
