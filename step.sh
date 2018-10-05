@@ -8,4 +8,4 @@ echo "we need a BrowserStack password: $browserstack_password"
 RESPONSE="$(curl -u $browserstack_username:$browserstack_password -X POST https://api-cloud.browserstack.com/app-automate/upload -F file=@$apk_path)"
 echo "response is: $RESPONSE"
 
-echo "$RESPONSE" | jq --raw-output '.app_url' | envman add --key BROWSERSTACK_APP_URL
+echo "$RESPONSE" | jq -j '.app_url' | envman add --key BROWSERSTACK_APP_URL
