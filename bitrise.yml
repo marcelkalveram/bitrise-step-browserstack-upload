@@ -5,9 +5,9 @@ app:
   envs:
     # If you want to share this step into a StepLib
     - BITRISE_STEP_ID: browserstack-upload
-    - BITRISE_STEP_VERSION: "0.0.1"
+    - BITRISE_STEP_VERSION: "0.1.0"
     - BITRISE_STEP_GIT_CLONE_URL: https://github.com/marcelkalveram/bitrise-step-browserstack-upload.git
-    - MY_STEPLIB_REPO_FORK_GIT_URL: $MY_STEPLIB_REPO_FORK_GIT_URL
+    - MY_STEPLIB_REPO_FORK_GIT_URL: https://github.com/marcelkalveram/bitrise-steplib
 
 workflows:
   test:
@@ -32,8 +32,9 @@ workflows:
             file if you would not specify another value.
           run_if: true
           inputs:
-            - browserstack_username: "test_username"
-            - browserstack_access_key: "test_password"
+            - upload_path: "$UPLOAD_PATH"
+            - browserstack_username: "$BROWSERSTACK_USERNAME"
+            - browserstack_access_key: "$BROWSERSTACK_ACCESS_KEY"
       - script:
           inputs:
             - content: |
