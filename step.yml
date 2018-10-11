@@ -41,6 +41,7 @@ inputs:
       description: |
         The username you use to log into your Browserstack account
       is_required: true
+      is_sensitive: true
       summary: Your Browserstack username
       title: Browserstack username
   - browserstack_access_key: $BROWSERSTACK_ACCESS_KEY
@@ -48,6 +49,7 @@ inputs:
       description: |
         The access key you use to log into your Browserstack account
       is_required: true
+      is_sensitive: true
       summary: Your Browserstack access key
       title: Browserstack access key
 outputs:
