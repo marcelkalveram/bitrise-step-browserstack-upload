@@ -5,7 +5,7 @@ app:
   envs:
     # If you want to share this step into a StepLib
     - BITRISE_STEP_ID: browserstack-upload
-    - BITRISE_STEP_VERSION: "0.1.1"
+    - BITRISE_STEP_VERSION: "0.1.2"
     - BITRISE_STEP_GIT_CLONE_URL: https://github.com/marcelkalveram/bitrise-step-browserstack-upload.git
     - MY_STEPLIB_REPO_FORK_GIT_URL: git@github.com:marcelkalveram/bitrise-steplib.git
 
@@ -24,17 +24,15 @@ workflows:
             - path: ./_tmp
             - is_create_path: true
       - path::./:
-          title: Step Test
+          title: Browserstack Upload Step Test
           description: |-
-            The example input has a default value,
-            you can overwrite it if you want to, just like we did below,
-            but the step would use the default value specified in the `step.yml`
-            file if you would not specify another value.
+            Uploads an IPA/APK file to Browserstack and returns an app URL that can be used for remote testing.
+            To test this, you need a Browserstack account with a valid username/access key and an IPA/APK path from which to upload
           run_if: true
           inputs:
-            - upload_path: "$UPLOAD_PATH"
-            - browserstack_username: "$BROWSERSTACK_USERNAME"
-            - browserstack_access_key: "$BROWSERSTACK_ACCESS_KEY"
+            - upload_path: $UPLOAD_PATH
+            - browserstack_username: $BROWSERSTACK_USERNAME
+            - browserstack_access_key: $BROWSERSTACK_ACCESS_KEY
       - script:
           inputs:
             - content: |
