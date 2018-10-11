@@ -12,8 +12,16 @@ source:
   commit: 932e393f9b0455f676839c7185c1d8740133beec
 host_os_tags:
   - osx-10.10
+project_type_tags:
+  - ios
+  - android
+  - xamarin
+  - react-native
+  - cordova
+  - ionic
 type_tags:
   - utility
+  - test
 toolkit:
   bash:
     entry_file: step.sh
