@@ -20,7 +20,6 @@ project_type_tags:
   - cordova
   - ionic
 type_tags:
-  - utility
   - test
 toolkit:
   bash:
