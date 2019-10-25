@@ -63,6 +63,10 @@ inputs:
       is_sensitive: true
       summary: Your Browserstack access key
       title: Browserstack access key
+  - custom_id:
+    opts:
+      summary: Custom id to distinguish uploads in case there are multiple apps
+      title: Custom Id
 outputs:
   - BROWSERSTACK_APP_URL: null
     opts:
